@@ -1,0 +1,13 @@
+padding x all 5 (20px)
+
+gap element 4
+rounded-lg
+
+svg 25px
+
+chuc nang -> ten chuc nang
+
+light mode
+text blue - 500
+
+dark:text-gray-200
