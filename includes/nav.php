@@ -1,18 +1,19 @@
-<nav class="bg-gray-200 dark:bg-gray-800 shadow dark:shadow-white">
+<nav class="bg-gray-200 dark:bg-gray-900 shadow">
     <div class="flex justify-between items-center gap-4 px-5 h-16">
         <div class="flex items-center gap-4">
-            <div class="font-bold text-blue-600 text-xl">Logo
-                <span data-lang="vi" class="lg:hidden text-red-500 dark:text-red-400 text-xs truncate italic line-clamp-1 text-nowrap">Đường dây nóng: 0987654321</span>
-                <span data-lang="en" class="lg:hidden text-red-500 dark:text-red-400 text-xs truncate italic line-clamp-1 text-nowrap">Hotline: 0987654321</span>
+            <div class="font-bold text-blue-600 dark:text-blue-500 text-2xl">
+                <img src="/../public/images/logo/Php_light.svg" class="dark:hidden" alt="logo" width="50" height="50">
+                <img src="/../public/images/logo/Php_dark.svg" class="hidden dark:block" alt="logo" width="50" height="50">
+                <span class="lg:hidden text-red-500 dark:text-red-400 text-xs italic text-nowrap">Hotline: 0987654321</span>
             </div>
             <div class="hidden lg:flex items-center gap-4">
-                <ul class="flex gap-4 font-bold text-blue-600 text-xl text-nowrap">
-                    <li data-lang="vi" class="hover:text-blue-700"> <a href="">Danh mục sản phẩm</a></li>
-                    <li data-lang="en" class="hidden hover:text-blue-700"><a href="">Product category</a></li>
-                    <li data-lang="vi" class="hover:text-blue-700"> <a href="">Sản phẩm nổi bật</a></li>
-                    <li data-lang="en" class="hidden hover:text-blue-700"><a href="">Highlighted</a></li>
-                    <li data-lang="vi" class="hover:text-blue-700"> <a href="">Mức giá ưu đãi</a></li>
-                    <li data-lang="en" class="hidden hover:text-blue-700"><a href="">Hot deals</a></li>
+                <ul class="flex gap-4 font-bold text-blue-600 dark:text-blue-500 text-lg text-nowrap">
+                    <li data-lang="vi" class="hover:text-blue-700 dark:hover:text-blue-600"> <a href="">Danh mục sản phẩm</a></li>
+                    <li data-lang="en" class="hidden hover:text-blue-700 dark:hover:text-blue-600"><a href="">Product category</a></li>
+                    <li data-lang="vi" class="hover:text-blue-700 dark:hover:text-blue-600"> <a href="">Sản phẩm nổi bật</a></li>
+                    <li data-lang="en" class="hidden hover:text-blue-700 dark:hover:text-blue-600"><a href="">Highlighted</a></li>
+                    <li data-lang="vi" class="hover:text-blue-700 dark:hover:text-blue-600"> <a href="">Mức giá ưu đãi</a></li>
+                    <li data-lang="en" class="hidden hover:text-blue-700 dark:hover:text-blue-600"><a href="">Hot deals</a></li>
                 </ul>
             </div>
         </div>
@@ -20,10 +21,10 @@
         <!-- * search -->
         <form
             action=""
-            class="hidden sm:flex bg-gray-100 dark:bg-gray-700 shadow border-2 border-blue-500 rounded-xl text-md">
+            class="hidden sm:flex bg-gray-100 dark:bg-gray-800 shadow border-2 border-blue-600 rounded-xl text-md">
             <button
                 aria-disabled="true"
-                class="place-content-center grid w-10 text-blue-600 cursor-pointer">
+                class="place-content-center grid w-10 text-blue-500 cursor-pointer">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -42,10 +43,10 @@
                 type="text"
                 spellcheck="false"
                 name="search"
-                class="py-1.5 outline-none w-20 focus:w-48 placeholder:text-black transition-all"
+                class="py-1.5 outline-none w-20 focus:w-48 dark:placeholder:text-gray-300 dark:text-gray-300 placeholder:text-black transition-all"
                 placeholder="Search..." />
             <button
-                class="place-content-center grid w-10 text-blue-600 cursor-pointer"
+                class="place-content-center grid w-10 text-blue-500 cursor-pointer"
                 aria-label="Clear input button"
                 type="reset">
                 <svg
@@ -76,20 +77,20 @@
                 <!-- cart -->
                 <li class="relative">
                     <a href="">
-                        <svg class="hover:scale-102 active:scale-95 transition-all duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
+                        <svg class="transition-all duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                         </svg>
                     </a>
-                    <span class="-top-1.5 -right-1.5 absolute flex justify-center items-center bg-red-500 rounded-full ring-2 ring-white w-4 h-4 text-white text-xs select-none">
+                    <span class="-top-1.5 -right-1.5 absolute flex justify-center items-center bg-red-500 rounded-full ring-2 ring-gray-200 w-4 h-4 text-white text-xs select-none">
                         0
                     </span>
                 </li>
                 <!-- dark light mode -->
-                <li id="toggle-theme" class="hover:scale-102 active:scale-95 transition-all duration-300 cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" id="sun" viewBox="0 0 16 16">
+                <li id="toggle-theme" class="active:scale-95 transition-all duration-300 cursor-pointer">
+                    <svg class="dark:hidden block" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" id="sun" viewBox="0 0 16 16">
                         <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
                     </svg>
-                    <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" id="moon" viewBox="0 0 16 16">
+                    <svg class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" id="moon" viewBox="0 0 16 16">
                         <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
                         <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
                     </svg>
@@ -121,10 +122,10 @@
                         id="login-link"
                         class="hidden top-10 right-0 z-50 absolute space-y-1 bg-white dark:bg-gray-700 shadow-lg p-1 rounded-lg w-fit font-bold text-black dark:text-gray-200">
                         <li>
-                            <a href="login.php" class="block hover:bg-gray-100 dark:hover:bg-gray-600 px-4 py-2 rounded-md">Login</a>
+                            <a href="/../app/Views/login.php" class="block hover:bg-gray-100 dark:hover:bg-gray-600 px-4 py-2 rounded-md">Login</a>
                         </li>
                         <li>
-                            <button class="hover:bg-red-100 dark:hover:bg-red-200 px-4 py-2 rounded-md text-red-500 hover:text-red-600 dark:text-red-400">Logout</button>
+                            <button class="hover:bg-red-100 dark:hover:bg-red-500 px-4 py-2 rounded-md text-red-500 hover:dark:text-red-100 hover:text-red-600 dark:text-red-400">Logout</button>
                         </li>
                     </ul>
                 </li>

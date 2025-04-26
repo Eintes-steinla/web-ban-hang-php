@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- * css -->
-    <link rel="stylesheet" href="./src/input.css">
     <link rel="stylesheet" href="./src/output.css">
 
     <script>
@@ -16,11 +15,15 @@
             localStorage.theme === "dark" ||
             (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
         );
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
     </script>
     <title>Home page</title>
 </head>
 
-<body class="bg-gray-100 select-none">
+<body class="bg-gray-100 dark:bg-gray-800 select-none">
     <?php include_once './includes/nav.php'; ?>
 
     <script src="./public/js/function.js"></script>

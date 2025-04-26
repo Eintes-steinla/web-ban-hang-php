@@ -11,3 +11,13 @@ light mode
 text blue - 500
 
 dark:text-gray-200
+
+username
+email
+password
+
+return jsonencode $data
+
+sửa quyền admin ở trang admin
+
+controllers chỉ xử lý logic, không xử lý yêu cầu http trực tiếp

@@ -63,10 +63,20 @@ function toggleLanguage() {
     langItems.forEach((item) => {
       if (item.getAttribute("data-lang") === lang) {
         item.classList.add("bg-blue-500");
+        item.classList.add("dark:bg-blue-600");
         item.classList.add("text-gray-200");
+        item.classList.remove("hover:bg-gray-100");
+        item.classList.add("hover:bg-blue-600");
+        item.classList.remove("dark:hover:bg-gray-600");
+        item.classList.add("dark:hover:bg-blue-500");
       } else {
         item.classList.remove("bg-blue-500");
+        item.classList.remove("dark:bg-blue-600");
         item.classList.remove("text-gray-200");
+        item.classList.add("hover:bg-gray-100");
+        item.classList.remove("hover:bg-blue-600");
+        item.classList.add("dark:hover:bg-gray-600");
+        item.classList.remove("dark:hover:bg-blue-500");
       }
     });
   }
