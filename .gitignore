@@ -1,4 +1,4 @@
-node_modules
-configs
-vendor
-routes
+node_modules/
+configs/
+vendor/
+routes/
