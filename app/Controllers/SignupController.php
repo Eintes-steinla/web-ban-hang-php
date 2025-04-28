@@ -61,7 +61,7 @@ class SignupController
         // kiểm tra rỗng
         if (empty($this->username)) {
             $errors['username'] = self::IS_REQUIRED;
-        } elseif (!preg_match('/^(?=.*[a-z])[a-z0-9 ._-]+$/', $this->username)) {
+        } elseif (!preg_match('/^(?=[a-zA-Z])[a-zA-Z0-9._-]*[a-zA-Z][a-zA-Z0-9._-]*$/', $this->username)) {
             $errors['username'] = self::INVALID_USERNAME;
         }
         if (password_verify('', $this->password)) {
