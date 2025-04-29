@@ -42,8 +42,13 @@ class App
 
         if (file_exists('app/Controllers/' . ($this->__controller) . '.php')) {
             require_once 'Controllers/' . ($this->__controller) . '.php';
-            $this->__controller = new $this->__controller();
-            unset($urlArr[0]);
+            // kiem tra class this->__controller ton tai
+            if (class_exists($this->__controller)) {
+                $this->__controller = new $this->__controller();
+                unset($urlArr[0]);
+            } else {
+                $this->loadError();
+            }
         } else {
             $this->loadError();
         }
@@ -56,7 +61,12 @@ class App
 
         // xu ly params
         $this->__params = array_values($urlArr);
-        call_user_func_array([$this->__controller, $this->__action], $this->__params);
+        // kiem tra method ton tai
+        if (method_exists($this->__controller, $this->__action)) {
+            call_user_func_array([$this->__controller, $this->__action], $this->__params);
+        } else {
+            $this->loadError();
+        }
     }
 
     public function loadError($error = '404')

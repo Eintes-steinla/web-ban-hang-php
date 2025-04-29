@@ -1,19 +1,17 @@
 <?php
-class Product
+class Product extends Controller
 {
     public function index()
     {
         echo 'Product index';
     }
 
-    public function detail($id = '', $slug = '')
+    public function list_product()
     {
-        echo "id: $id, slug: $slug";
-    }
-
-    public function search()
-    {
-        $keyword = $_GET['keyword'] ?? 'default_keyword';
-        echo "keyword: $keyword";
+        $product = $this->model(('ProductModel'));
+        $data = $product->getProductLists();
+        echo '<pre>';
+        print_r($data);
+        echo '</pre>';
     }
 }
