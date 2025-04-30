@@ -1,6 +1,8 @@
 <?php
 class Product extends Controller
 {
+    public $data = [];
+
     public function index()
     {
         echo 'Product index';
@@ -9,9 +11,19 @@ class Product extends Controller
     public function list_product()
     {
         $product = $this->model(('ProductModel'));
-        $data = $product->getProductLists();
-        echo '<pre>';
-        print_r($data);
-        echo '</pre>';
+        $dataProduct = $product->getProductLists();
+
+        $title = "danh sach san pham";
+        $this->data['product_list'] = $dataProduct;
+        $this->data['page_title'] = $title;
+        // render view
+        $this->render('products/list', $this->data);
+    }
+
+    public function detail($id = 0)
+    {
+        $product = $this->model(('ProductModel'));
+        $this->data['info'] = $product->getDetail($id);
+        $this->render('products/detail', $this->data);
     }
 }
