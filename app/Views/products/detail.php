@@ -1,1 +1,3 @@
-CHI TIET SAN PHAM <?php echo $info; ?>
+<?php
+echo 'Chi tiet san pham' . $info;
+echo $title;

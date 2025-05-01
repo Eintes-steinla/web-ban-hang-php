@@ -1,6 +1,6 @@
 <?php
 
-class HomeModel
+class HomeModel extends Model
 {
     protected $table = 'products';
 
